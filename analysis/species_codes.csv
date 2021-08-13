@@ -1,4 +1,5 @@
 code,genus,species
+ACERUB,Acer,rubrum
 ACHMIL,Achillea,millefolium
 ADDLEU,,
 ADELEW,Adenolinum,lewisii
@@ -9,6 +10,7 @@ DELNUT,Delphinium,nuttallianum
 ELYSPP,Elymus,spp
 ERIFLA,Erigeron,flagellaris
 ERIUMB,Eriogonum,umbellatum
+ERYGRA,Erythronium,grandiflorum
 FESTHU,Festuca,thurberi
 GERVIS,Geranium,viscosissimum
 GEUTRI,Geum,triflorum
@@ -24,6 +26,6 @@ SENCRA,Senecio,crassulus
 TAROFF,Taraxacum,officinale
 THAFEN,Thalictrum,fendleri
 VERCAL,Veratrum,californicum
-VALSPP,Valeria,spp
+VALSPP,Valeriana,spp
 WYEAMP,Wyethia,amplexicaulis
 bare,bareground,bareground
