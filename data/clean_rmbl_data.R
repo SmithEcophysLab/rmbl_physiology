@@ -50,14 +50,12 @@ data_all <- full_join(data_leafarea_licor, multispeq,
 
 data_all$species_code[data_all$species_code == "delphinium"] <- "delspp"
 data_all$species_code[data_all$species_code == "elymus"] <- "elyspp"
-data_all$species_code[data_all$species_code == "maple"] <- "acerub"
+data_all$species_code[data_all$species_code == "maple"] <- "hersph"
 data_all$species_code[data_all$species_code == "poa"] <- "poaspp"
 data_all$species_code[data_all$species_code == "valeriana"] <- "valspp"
 data_all$species_code[data_all$species_code == "veratrum"] <- "vercal"
 
-data_all$species[data_all$species_code == "acerub"] <- "Acer rubrum"
 data_all$species[data_all$species_code == "achmil"] <- "Achillea millefolium"
-data_all$species[data_all$species_code == "addleu"] <- "Gen. spp."
 data_all$species[data_all$species_code == "adelew"] <- "Adenolinum lewisii"
 data_all$species[data_all$species_code == "arttri"] <- "Artemisia tridentata"
 data_all$species[data_all$species_code == "chrvis"] <- "Chrysothamnus viscidiflorus"
@@ -88,3 +86,4 @@ data_all$species[data_all$species_code == "wyeamp"] <- "Wyethia amplexicaulis"
 data_all$species[data_all$species_code == "bare"] <- "bareground"
 
 write.csv(data_all, 'data_clean.csv', row.names = F)
+ 

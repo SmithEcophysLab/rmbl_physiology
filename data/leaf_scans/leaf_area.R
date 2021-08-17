@@ -33,3 +33,4 @@ leaf_area_clean$treatment[leaf_area_clean$treatment == "warming"] <- "Warming"
 leaf_area_clean$treatment[leaf_area_clean$treatment == "outside"] <- "Outside"
 
 write.csv(leaf_area_clean, 'leaf_area_1.csv', row.names = F)
+
