@@ -1,4 +1,4 @@
-"site","plot","treatment","species_code","species","individual","type","leaf_area","weight"
+"site","plot","treatment","code","species","individual","type","leaf_area","weight"
 "Almont","1","Control","achmil",NA,"1","p",1.823,NA
 "Almont","1","Control","achmil",NA,"3","t",9.958,NA
 "Almont","1","Control","geutri",NA,"1","ms",5.163,NA

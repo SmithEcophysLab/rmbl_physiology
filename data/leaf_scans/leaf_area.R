@@ -16,7 +16,7 @@ write.csv(leaf_area, file = "leaf_area_raw.csv")
 ## read in data
 leaf_area <- read.csv("leaf_area_raw.csv")[ , 2:3]
 
-leaf_area_clean <- separate(leaf_area, sample, c("site", "treatment", "plot", "species_code", "individual", 
+leaf_area_clean <- separate(leaf_area, sample, c("site", "treatment", "plot", "code", "individual", 
                                                  "type"))
 
 leaf_area_clean$weight <- NA
