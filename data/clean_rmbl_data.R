@@ -3,7 +3,6 @@
 library(dplyr)
 library(tidyr)
 
-## read in data
 
 # licor
 almont_14 <- read.csv("licor/raw/2021-06-14-1405_logdata_almont.csv")
@@ -12,6 +11,15 @@ gothiccamp_16 <- read.csv("licor/raw/2021-06-16-0948_logdata_gothiccamp.csv")
 
 licor <- bind_rows(almont_14, almont_15, gothiccamp_16) %>% 
   separate(individual, c("code", "individual"))
+
+licor$code[licor$code == "delphinium"] <- "DELSPP"
+licor$code[licor$code == "elymus"] <- "ELYSPP"
+licor$code[licor$code == "maple"] <- "HERSPH"
+licor$code[licor$code == "poa"] <- "POASPP"
+licor$code[licor$code == "valeriana"] <- "VALSPP"
+licor$code[licor$code == "veratrum"] <- "VERCAL"
+
+licor$code <- toupper(licor$code)
 
 write.csv(licor, 'licor/licor.csv', row.names = F)
 
@@ -24,19 +32,38 @@ names(leaf_area_2)[1:9] <- c("site", "plot", "treatment", "code", "species",  "i
 leaf_area <- bind_rows(leaf_area_1, leaf_area_2)
 leaf_area$type[leaf_area$type == "Photosyn"] <- "p"
 
-leaf_area$code[leaf_area$species == "Delphinium"] <- "delphinium"
-leaf_area$code[leaf_area$species == "Erythronium grandiflorum"] <- "erygra"
-leaf_area$code[leaf_area$species == "Ger"] <- "gervis"
-leaf_area$code[leaf_area$species == "Heraclum"] <- "hersph"
-leaf_area$code[leaf_area$species == "Senecio crassulus"] <- "sencra"
-leaf_area$code[leaf_area$species == "Veratrum"] <- "veratrum"
-leaf_area$code[leaf_area$species == "Wyethia"] <- "wyeamp"
+leaf_area$code[leaf_area$species == "Delphinium"] <- "DELSPP"
+leaf_area$code[leaf_area$species == "Erythronium grandiflorum"] <- "ERYGRA"
+leaf_area$code[leaf_area$species == "Ger"] <- "GERVIS"
+leaf_area$code[leaf_area$species == "Heraclum"] <- "HERSPH"
+leaf_area$code[leaf_area$species == "Senecio crassulus"] <- "SENCRA"
+leaf_area$code[leaf_area$species == "Veratrum"] <- "VERCAL"
+leaf_area$code[leaf_area$species == "Wyethia"] <- "WYEAMP"
+leaf_area$code[leaf_area$code == "delphinium"] <- "DELSPP"
+leaf_area$code[leaf_area$code == "elymus"] <- "ELYSPP"
+leaf_area$code[leaf_area$code == "maple"] <- "HERSPH"
+leaf_area$code[leaf_area$code == "poa"] <- "POASPP"
+leaf_area$code[leaf_area$code == "valeriana"] <- "VALSPP"
+leaf_area$code[leaf_area$code == "veratrum"] <- "VERCAL"
+
+leaf_area$code <- toupper(leaf_area$code)
+
+leaf_area <- select(leaf_area, -species)
 
 write.csv(leaf_area, 'leaf_scans/leaf_area.csv', row.names = F)
 
 # multispeq
 multispeq <- read.csv("photosynq/multispeq_data_clean.csv")
 multispeq$type <- rep("ms")
+
+multispeq$code[multispeq$code == "delphinium"] <- "DELSPP"
+multispeq$code[multispeq$code == "elymus"] <- "ELYSPP"
+multispeq$code[multispeq$code == "maple"] <- "HERSPH"
+multispeq$code[multispeq$code == "poa"] <- "POASPP"
+multispeq$code[multispeq$code == "valeriana"] <- "VALSPP"
+multispeq$code[multispeq$code == "veratrum"] <- "VERCAL"
+
+multispeq$code <- toupper(multispeq$code)
 
 # combine datasets
 leaf_area$individual <-as.character(leaf_area$individual)
@@ -45,45 +72,15 @@ multispeq$individual <-as.character(multispeq$individual)
 
 data_leafarea_licor <- full_join(leaf_area, licor, 
                                  by = c("site", "treatment", "plot", "code", "individual", "type"))
-data_all <- full_join(data_leafarea_licor, multispeq, 
+data_leafarea_licor_multispeq <- full_join(data_leafarea_licor, multispeq, 
                       by = c("site", "treatment", "plot", "code", "individual", "type"))
 
-data_all$code[data_all$code == "delphinium"] <- "delspp"
-data_all$code[data_all$code == "elymus"] <- "elyspp"
-data_all$code[data_all$code == "maple"] <- "hersph"
-data_all$code[data_all$code == "poa"] <- "poaspp"
-data_all$code[data_all$code == "valeriana"] <- "valspp"
-data_all$code[data_all$code == "veratrum"] <- "vercal"
+# species codes
+species_codes <- read.csv("../analysis/species_codes.csv")
+species_codes <- select(species_codes, -X)
 
-data_all$species[data_all$code == "achmil"] <- "Achillea millefolium"
-data_all$species[data_all$code == "adelew"] <- "Adenolinum lewisii"
-data_all$species[data_all$code == "arttri"] <- "Artemisia tridentata"
-data_all$species[data_all$code == "chrvis"] <- "Chrysothamnus viscidiflorus"
-data_all$species[data_all$code == "delspp"] <- "Delphinium spp."
-data_all$species[data_all$code == "delbar"] <- "Delphinium barbeyi"
-data_all$species[data_all$code == "delnut"] <- "Delphinium nuttallianum"
-data_all$species[data_all$code == "elyspp"] <- "Elymus spp."
-data_all$species[data_all$code == "erifla"] <- "Erigeron flagellaris"
-data_all$species[data_all$code == "eriumb"] <- "Eriogonum umbellatum"
-data_all$species[data_all$code == "erygra"] <- "Erythronium grandiflorum"
-data_all$species[data_all$code == "festhu"] <- "Festuca thurberi"
-data_all$species[data_all$code == "gervis"] <- "Geranium viscosissimum"
-data_all$species[data_all$code == "geutri"] <- "Geum triflorum"
-data_all$species[data_all$code == "helqui"] <- "Helianthella quinquenervis"
-data_all$species[data_all$code == "hersph"] <- "Heracleum sphondylium"
-data_all$species[data_all$code == "irimis"] <- "Iris missouriensis"
-data_all$species[data_all$code == "latleu"] <- "Lathyrus leucanthus"
-data_all$species[data_all$code == "mercil"] <- "Mertensia ciliata"
-data_all$species[data_all$code == "poaspp"] <- "Poa spp."
-data_all$species[data_all$code == "potgra"] <- "Potentilla gracilis"
-data_all$species[data_all$code == "roswoo"] <- "Rosa woodsii"
-data_all$species[data_all$code == "sencra"] <- "Senecio crassulus"
-data_all$species[data_all$code == "taroff"] <- "Taraxacum officinale"
-data_all$species[data_all$code == "thafen"] <- "Thalictrum fendleri"
-data_all$species[data_all$code == "vercal"] <- "Veratrum californicum"
-data_all$species[data_all$code == "valspp"] <- "Valeriana spp."
-data_all$species[data_all$code == "wyeamp"] <- "Wyethia amplexicaulis"
-data_all$species[data_all$code == "bare"] <- "bareground"
+data_all <- left_join(data_leafarea_licor_multispeq, species_codes, by = c("code"))
+data_all <- select(data_all, site, plot, treatment, code, genus_species, genus, species, everything())
 
 write.csv(data_all, 'data_clean.csv', row.names = F)
  

@@ -1,107 +1,110 @@
-CODE,GENUS,SPECIES
-ACHMIL,Achillea,millefolium
-ADELEW,Adenolinum,lewisii
-AGOAUR,Agoseris,aurantiaca
-AGOGLA,Agoseris,glauca
-AGOS1A,Agoseris,spp.
-AGOS1C,Agoseris,spp.
-ALL.UUU.,,
-ALLSPE,,
-ALOPRA,Alopecurus ,pratensis
-ANDCHA,Androsace,chamaejasme
-ANTCOR,Antennaria ,corymbosa
-ANTE1C,Antennaria ,spp.
-ANTROS,Antennaria ,rosea
-ARCUVA,Arctostaphylos ,uva-ursi
-ARNMOL,Arnica ,mollis
-ARNPAR,Arnica ,parryi
-ARTTRI,Artemisia,tridentata
-AQUSPP,Aquilegia,spp.
-bare,bareground,bareground
-BOESTR,Boechera,stricta
-BROINE,Bromopsis ,inermis
-BROSPE,Bromelica,spectabilis
-CAMROT,Campanula ,rotundifolia
-CAPBUR,Capsella ,bursa-pastoris
-CARALB,Carex ,albonigra
-CASMIN,Castilleja ,miniata
-CASSUL,Castilleja ,sulphurea
-CHESPP,Chenopodium,spp.
-CHRVIS,Chrysothamnus,viscidiflorus
-CIRSPP,Cirsium,spp.
-CLALAN,Claytonia ,lanceolata
-COLLIN,Collomia,linearis
-CYPE1A,Cyperus,spp.
-DABSPE,Dabra,spectabillis
-DELBAR,Delphinium,barbeyi
-DELNUT,Delphinium,nuttallianum
-DESSOP,Descurainia,sophia
-DRAAUR,Draba ,aurea
-ELYELY,Elymus ,elymoides
-ELYGLA,Elymus ,glaucus
-ELYSPP,Elymus,spp.
-ELYTRA,Elymus ,trachycaulus
-ERECON,Eremogone ,congesta
-ERIFLA,Erigeron,flagellaris
-ERIGLA,Erigeron ,glabellus
-ERISPE,Erigeron ,speciosus
-ERISPP,Eriogonum,spp.
-ERIUMB,Eriogonum,umbellatum
-ERYGRA,Erythronium,grandiflorum
-FESTHU,Festuca,thurberi
-FRASPE,Frasera ,speciosa
-FRAVIR,Fragaria ,virginiana
-GALSEP,Galium,spp.
-GERVIS,Geranium,viscosissimum
-GEUTRI,Geum,triflorum
-HACFLO,Hackelia,floribunda
-HELHOO,Helenium,hoopesii
-HELMUL,Heliomeris,multiflora
-HELQUI,Helianthella,quinquenervis
-HERSPH,Heracleum,sphondylium
-HYDFEN,Hydrophyllum ,fendleri
-IPOAGG,Ipomopsis ,aggregata
-IRIMIS,Iris,missouriensis
-JUNDRU,Juncus ,drummondii
-LATLEU,Lathyrus,leucanthus
-LEWPYG,Lewesia,pygmae
-LIGPOR,Ligusticum,porteri
-MERCIL,Mertensia,ciliata
-MERFUS,Mertensia,fusiformis
-MUHMON,Muhlenbergia,montana
-NOCMON,Noccaceae,montana
-OLIDRA,Oligosporus,dracunculus
-OSMOCC,Osmorhiza,occidentalis
-PENS1A,Penstemon,spp.
-PHASER,Phacelia ,sericea
-POA1A,Poa ,spp.
-POA1B,Poa ,spp.
-POAALP,Poa ,alpina
-POAC1A,Poa ,spp.
-POALEP,Poa ,leptocoma
-POTDIV,Potentilla ,diversifolia
-POTGRA,Potentilla,gracilis
-POTHIP,Potentilla ,hippiana
-PSEMON,Pseudocymopterus ,montanus
-PULPAT,Pulsatilla ,patens
-RANINA,Ranunculus ,inamoenus
-ROSWOO,Rosa,woodsii
-SENCRA,Senecio,crassulus
-SENE1A,Senecio,spp.
-SENE1C,Senecio,spp.
-SIBPRO,Sibbaldia,procumbens
-TAROFF,Taraxacum,officinale
-THAFEN,Thalictrum,fendleri
-TRADUB,Tragopogon ,dubius
-VACCAE,Vaccinium ,caespitosus
-VALEDU,Valeriana ,edulis
-VALSPP,Valeriana,spp
-VERCAL,Veratrum,californicum
-VERWOR,Veronica ,wormskjoldii
-VICAME,Vicia ,americana
-VIOADU,Viola ,adunca
-VIONUT,Viola ,nuttallii
-VIOSCO,Viola ,scopulorum
-VIOVAL,Viola ,vallicola
-VIOL1A,Viola ,spp.
-WYEAMP,Wyethia,amplexicaulis
+code,genus_species,genus,species,
+ACHMIL,Achillea millefolium,Achillea,millefolium,
+ADELEW,Adenolinum lewisii,Adenolinum,lewisii,
+AGOAUR,Agoseris aurantiaca,Agoseris,aurantiaca,
+AGOGLA,Agoseris glauca,Agoseris,glauca,
+AGOS1A,Agoseris spp.,Agoseris,spp.,check
+AGOS1C,Agoseris spp.,Agoseris,spp.,check
+ALLUUU,Allium spp.,Allium,spp.,check
+ALLSPE,Allium spp.,Allium,spp.,check
+ALOPRA,Alopecurus pratensis,Alopecurus,pratensis,
+ANDCHA,Androsace chamaejasme,Androsace,chamaejasme,
+ANTCOR,Antennaria corymbosa,Antennaria,corymbosa,
+ANTE1C,Antennaria spp.,Antennaria,spp.,check
+ANTROS,Antennaria rosea,Antennaria,rosea,
+ARCUVA,Arctostaphylos uva-ursi,Arctostaphylos,uva-ursi,
+ARNMOL,Arnica mollis,Arnica,mollis,
+ARNPAR,Arnica parryi,Arnica,parryi,
+ARTTRI,Artemisia tridentata,Artemisia,tridentata,
+AQUSPP,Aquilegia spp.,Aquilegia,spp.,
+BARE,bareground bareground,bareground,bareground,
+BOESTR,Boechera stricta,Boechera,stricta,
+BROINE,Bromopsis inermis,Bromopsis,inermis,
+BROSPE,Bromelica spectabilis,Bromelica,spectabilis,
+CAMROT,Campanula rotundifolia,Campanula,rotundifolia,
+CAPBUR,Capsella bursa-pastoris,Capsella,bursa-pastoris,
+CARALB,Carex albonigra,Carex,albonigra,
+CASMIN,Castilleja miniata,Castilleja,miniata,
+CASSUL,Castilleja sulphurea,Castilleja,sulphurea,
+CHESPP,Chenopodium spp.,Chenopodium,spp.,
+CHRVIS,Chrysothamnus viscidiflorus,Chrysothamnus,viscidiflorus,
+CIRSPP,Cirsium spp.,Cirsium,spp.,
+CLALAN,Claytonia lanceolata,Claytonia,lanceolata,
+COLLIN,Collomia linearis,Collomia,linearis,
+CYPE1A,Cyperus spp.,Cyperus,spp.,check
+DABSPE,Dabra spectabillis,Dabra,spectabillis,
+DELBAR,Delphinium barbeyi,Delphinium,barbeyi,
+DELNUT,Delphinium nuttallianum,Delphinium,nuttallianum,
+DELSPP,Delphinium spp.,Delphinium,spp.,
+DESSOP,Descurainia sophia,Descurainia,sophia,
+DRAAUR,Draba aurea,Draba,aurea,
+ELYELY,Elymus elymoides,Elymus,elymoides,
+ELYGLA,Elymus glaucus,Elymus,glaucus,
+ELYSPP,Elymus spp.,Elymus,spp.,
+ELYTRA,Elymus trachycaulus,Elymus,trachycaulus,
+ERECON,Eremogone congesta,Eremogone,congesta,
+ERIFLA,Erigeron flagellaris,Erigeron,flagellaris,
+ERIGLA,Erigeron glabellus,Erigeron,glabellus,
+ERISPE,Erigeron speciosus,Erigeron,speciosus,
+ERISPP,Eriogonum spp.,Eriogonum,spp.,
+ERIUMB,Eriogonum umbellatum,Eriogonum,umbellatum,
+ERYGRA,Erythronium grandiflorum,Erythronium,grandiflorum,
+FESTHU,Festuca thurberi,Festuca,thurberi,
+FRASPE,Frasera speciosa,Frasera,speciosa,
+FRAVIR,Fragaria virginiana,Fragaria,virginiana,
+GALSEP,Galium spp.,Galium,spp.,check
+GERVIS,Geranium viscosissimum,Geranium,viscosissimum,
+GEUTRI,Geum triflorum,Geum,triflorum,
+HACFLO,Hackelia floribunda,Hackelia,floribunda,
+HELHOO,Helenium hoopesii,Helenium,hoopesii,
+HELMUL,Heliomeris multiflora,Heliomeris,multiflora,
+HELQUI,Helianthella quinquenervis,Helianthella,quinquenervis,
+HERSPH,Heracleum sphondylium,Heracleum,sphondylium,
+HYDFEN,Hydrophyllum fendleri,Hydrophyllum,fendleri,
+IPOAGG,Ipomopsis aggregata,Ipomopsis,aggregata,
+IRIMIS,Iris missouriensis,Iris,missouriensis,
+JUNDRU,Juncus drummondii,Juncus,drummondii,
+LATLEU,Lathyrus leucanthus,Lathyrus,leucanthus,
+LEWPYG,Lewesia pygmae,Lewesia,pygmae,
+LIGPOR,Ligusticum porteri,Ligusticum,porteri,
+LITTER,Leaf litter,Leaf litter,Leaf litter,
+MERCIL,Mertensia ciliata,Mertensia,ciliata,
+MERFUS,Mertensia fusiformis,Mertensia,fusiformis,
+MUHMON,Muhlenbergia montana,Muhlenbergia,montana,
+NOCMON,Noccaceae montana,Noccaceae,montana,
+OLIDRA,Oligosporus dracunculus,Oligosporus,dracunculus,
+OSMOCC,Osmorhiza occidentalis,Osmorhiza,occidentalis,
+PENS1A,Penstemon spp.,Penstemon,spp.,check
+PHASER,Phacelia sericea,Phacelia,sericea,
+POA1A,Poa spp.,Poa,spp.,check
+POA1B,Poa spp.,Poa,spp.,check
+POAALP,Poa alpina,Poa,alpina,
+POAC1A,Poa spp.,Poa,spp.,check
+POALEP,Poa leptocoma,Poa,leptocoma,
+POASPP,Poa spp.,Poa,spp.,
+POTDIV,Potentilla diversifolia,Potentilla,diversifolia,
+POTGRA,Potentilla gracilis,Potentilla,gracilis,
+POTHIP,Potentilla hippiana,Potentilla,hippiana,
+PSEMON,Pseudocymopterus montanus,Pseudocymopterus,montanus,
+PULPAT,Pulsatilla patens,Pulsatilla,patens,
+RANINA,Ranunculus inamoenus,Ranunculus,inamoenus,
+ROSWOO,Rosa woodsii,Rosa,woodsii,
+SENCRA,Senecio crassulus,Senecio,crassulus,
+SENE1A,Senecio spp.,Senecio,spp.,check
+SENE1C,Senecio spp.,Senecio,spp.,check
+SIBPRO,Sibbaldia procumbens,Sibbaldia,procumbens,
+TAROFF,Taraxacum officinale,Taraxacum,officinale,
+THAFEN,Thalictrum fendleri,Thalictrum,fendleri,
+TRADUB,Tragopogon dubius,Tragopogon,dubius,
+VACCAE,Vaccinium caespitosus,Vaccinium,caespitosus,
+VALEDU,Valeriana edulis,Valeriana,edulis,
+VALSPP,Valeriana spp,Valeriana,spp,
+VERCAL,Veratrum californicum,Veratrum,californicum,
+VERWOR,Veronica wormskjoldii,Veronica,wormskjoldii,
+VICAME,Vicia americana,Vicia,americana,
+VIOADU,Viola adunca,Viola,adunca,
+VIONUT,Viola nuttallii,Viola,nuttallii,
+VIOSCO,Viola scopulorum,Viola,scopulorum,
+VIOVAL,Viola vallicola,Viola,vallicola,
+VIOL1A,Viola spp.,Viola,spp.,check
+WYEAMP,Wyethia amplexicaulis,Wyethia,amplexicaulis,
