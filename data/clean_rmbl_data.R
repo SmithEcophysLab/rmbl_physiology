@@ -5,11 +5,17 @@ library(tidyr)
 
 
 # licor
-almont_14 <- read.csv("licor/raw/2021-06-14-1405_logdata_almont.csv")
-almont_15 <- read.csv("licor/raw/2021-06-15-0950_logdata_almont.csv")
-gothiccamp_16 <- read.csv("licor/raw/2021-06-16-0948_logdata_gothiccamp.csv")
+almont_0614 <- read.csv("licor/raw/2021-06-14-1405_logdata_almont.csv")
+almont_0615 <- read.csv("licor/raw/2021-06-15-0950_logdata_almont.csv")
+gothic_0616 <- read.csv("licor/raw/2021-06-16-0948_logdata_gothiccamp.csv")
+almont_0623 <- read.csv("licor/raw/2021-06-23-1130_Almont.csv")
+gothic_0701 <- read.csv("licor/raw/2021-07-01-1017_gothiccamp.csv")
+almont_0705 <- read.csv("licor/raw/2021-07-05-Almont.csv")
+cinnamon_0709 <- read.csv("licor/raw/2021-07-09-cinnamon.csv")
 
-licor <- bind_rows(almont_14, almont_15, gothiccamp_16) %>% 
+
+licor <- bind_rows(almont_0614, almont_0615, gothic_0616, almont_0623, gothic_0701, almont_0705, 
+                   cinnamon_0709) %>% 
   separate(individual, c("code", "individual"))
 
 licor$code[licor$code == "delphinium"] <- "DELSPP"
@@ -17,6 +23,11 @@ licor$code[licor$code == "elymus"] <- "ELYSPP"
 licor$code[licor$code == "maple"] <- "HERSPH"
 licor$code[licor$code == "poa"] <- "POASPP"
 licor$code[licor$code == "valeriana"] <- "VALSPP"
+licor$code[licor$code == "veratrum"] <- "VERCAL"
+licor$code[licor$code == "ger"] <- "GERVIS"
+licor$code[licor$code == "ery"] <- "ERYGRA"
+licor$code[licor$code == "sen"] <- "SENCRA"
+licor$code[licor$code == "heraclum"] <- "HERSPH"
 licor$code[licor$code == "veratrum"] <- "VERCAL"
 
 licor$code <- toupper(licor$code)
