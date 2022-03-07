@@ -35,10 +35,11 @@ licor$code <- toupper(licor$code)
 write.csv(licor, 'licor/licor.csv', row.names = F)
 
 # leaf area
-leaf_area_1 <- read.csv("leaf_scans/leaf_area_1.csv")
+leaf_area_1 <- read.csv("leaf_scans/leaf_area_clean_update.csv")
 leaf_area_2 <- read.csv("leaf_scans/RMBL2021_Leaf AreasPhotosynthesis.csv")
 names(leaf_area_2)[1:9] <- c("site", "plot", "treatment", "code", "species",  "individual", 
                        "type", "leaf_area", "weight")
+leaf_area_2$plot <- as.character(leaf_area_2$plot)
 
 leaf_area <- bind_rows(leaf_area_1, leaf_area_2)
 leaf_area$type[leaf_area$type == "Photosyn"] <- "p"
@@ -77,9 +78,9 @@ multispeq$code[multispeq$code == "veratrum"] <- "VERCAL"
 multispeq$code <- toupper(multispeq$code)
 
 # combine datasets
-leaf_area$individual <-as.character(leaf_area$individual)
-licor$individual <-as.character(licor$individual)
-multispeq$individual <-as.character(multispeq$individual)
+leaf_area$individual <- as.character(leaf_area$individual)
+licor$individual <- as.character(licor$individual)
+multispeq$individual <- as.character(multispeq$individual)
 
 data_leafarea_licor <- full_join(leaf_area, licor, 
                                  by = c("site", "treatment", "plot", "code", "individual", "type"))
