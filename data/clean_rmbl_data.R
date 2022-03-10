@@ -35,11 +35,11 @@ licor$code <- toupper(licor$code)
 write.csv(licor, 'licor/licor.csv', row.names = F)
 
 # leaf area
-leaf_area_1 <- read.csv("leaf_scans/leaf_area_clean_update.csv")
+leaf_area_1 <- read.csv("leaf_scans/leaf_area_clean.csv")
 leaf_area_2 <- read.csv("leaf_scans/RMBL2021_Leaf AreasPhotosynthesis.csv")
 names(leaf_area_2)[1:9] <- c("site", "plot", "treatment", "code", "species",  "individual", 
                        "type", "leaf_area", "weight")
-leaf_area_2$plot <- as.character(leaf_area_2$plot)
+# leaf_area_2$plot <- as.character(leaf_area_2$plot)
 
 leaf_area <- bind_rows(leaf_area_1, leaf_area_2)
 leaf_area$type[leaf_area$type == "Photosyn"] <- "p"

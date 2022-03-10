@@ -14,23 +14,29 @@ write.csv(leaf_area, file = "leaf_area_raw.csv")
 # clean leaf area data
 
 ## read in data
-leaf_area <- read.csv("leaf_area_raw.csv")[ , 2:3]
+leaf_area_raw <- read.csv("leaf_area_raw.csv")[ , 2:3]
+leaf_weights <- read.csv("leaf_weights.csv")
 
-leaf_area_clean <- separate(leaf_area, sample, c("site", "treatment", "plot", "code", "individual", 
+leaf_area_clean <- separate(leaf_area_raw, sample, c("site", "treatment", "plot", "code", "individual", 
                                                  "type"))
+leaf_weights$individual <- as.character(leaf_weights$individual)
+leaf_weights$plot <- as.character(leaf_weights$plot)
 
-leaf_area_clean$weight <- NA
-leaf_area_clean$species <- NA
+leaf_area_clean_w <- full_join(leaf_area_clean, leaf_weights, 
+                                   by = c("site", "treatment", "plot", "code", "individual", "type"))
+leaf_area_clean_w$species <- NA
 
-names(leaf_area_clean)[7] <- c("leaf_area")
+names(leaf_area_clean_w)[7] <- c("leaf_area")
 
-leaf_area_clean <- subset(leaf_area_clean, select = c(1, 3, 2, 4, 9, 5, 6, 7, 8))
+leaf_area_clean_w <- subset(leaf_area_clean_w, select = c("site", "plot", "treatment", "species", "code", "individual", 
+                                                          "type", "leaf_area", "weight"))
 
-leaf_area_clean$site[leaf_area_clean$site == "almont"] <- "Almont"
-leaf_area_clean$site[leaf_area_clean$site == "gothiccamp"] <- "Gothic"
-leaf_area_clean$treatment[leaf_area_clean$treatment == "control"] <- "Control"
-leaf_area_clean$treatment[leaf_area_clean$treatment == "warming"] <- "Warming"
-leaf_area_clean$treatment[leaf_area_clean$treatment == "outside"] <- "Outside"
+leaf_area_clean_w$site[leaf_area_clean_w$site == "almont"] <- "Almont"
+leaf_area_clean_w$site[leaf_area_clean_w$site == "gothiccamp"] <- "Gothic"
+leaf_area_clean_w$treatment[leaf_area_clean_w$treatment == "control"] <- "Control"
+leaf_area_clean_w$treatment[leaf_area_clean_w$treatment == "warming"] <- "Warming"
+leaf_area_clean_w$treatment[leaf_area_clean_w$treatment == "outside"] <- "Outside"
 
-write.csv(leaf_area_clean, 'leaf_area_1.csv', row.names = F)
+
+write.csv(leaf_area_clean_w, 'leaf_area_clean.csv', row.names = F)
 
