@@ -15,30 +15,30 @@ Almont,24,Warming,,Wyethia,10,,221.408,2.0257
 Almont,28,Warming,,Wyethia,13,,161.552,1.4442
 Almont,32,Warming,,Wyethia,11,,152.439,1.2877
 Almont,32,Warming,,Wyethia,12,,174.364,1.4686
-Cinnamon,1,Control,,Erythronium grandiflorum,1,Photosyn,42.737,0.2471
-Cinnamon,1,Control,,Senecio crassulus,1,Photosyn,13.107,0.072
-Cinnamon,2,Control,,Senecio crassulus,2,Photosyn,23.014,0.1215
-Cinnamon,2,Control,,Erythronium grandiflorum,2,Photosyn,40.587,0.2417
-Cinnamon,3,Control,,Senecio crassulus,3,Photosyn,13.279,0.0801
-Cinnamon,3,Control,,Erythronium grandiflorum,3,Photosyn,20.717,0.0976
-Cinnamon,4,Warming,,Erythronium grandiflorum,10,Photosyn,27.531,0.1386
-Cinnamon,4,Warming,,Senecio crassulus,10,Photosyn,12.472,0.0641
-Cinnamon,4,Control,,Senecio crassulus,4,Photosyn,15.086,0.0805
-Cinnamon,4,Control,,Erythronium grandiflorum,4,Photosyn,29.769,0.134
-Cinnamon,5,Control,,Senecio crassulus,12,Photosyn,20.608,0.1093
-Cinnamon,5,Warming,,Erythronium grandiflorum,9,Photosyn,24.885,0.1469
-Cinnamon,5,Control,,Erythronium grandiflorum,11,Photosyn,30.064,0.1618
-Cinnamon,5,Control,,Senecio crassulus,5,Photosyn,13.004,0.0541
-Cinnamon,5,Control,,Erythronium grandiflorum,5,Photosyn,25.762,0.1357
-Cinnamon,9,Warming,,Senecio crassulus,11,Photosyn,13.081,0.0706
-Cinnamon,9,Warming,,Senecio crassulus,11,Photosyn,8.381,0.0403
-Cinnamon,10,Warming,,Erythronium grandiflorum,12,Photosyn,31.349,0.1795
-Cinnamon,10,Warming,,Senecio crassulus,13,Photosyn,9.909,0.0522
-Cinnamon,12,Warming,,Erythronium grandiflorum,7,Photosyn,30.945,0.1744
-Cinnamon,13,Warming,,Erythronium grandiflorum,8,Photosyn,22.635,0.1272
-Cinnamon,13,Warming,,Senecio crassulus,8,Photosyn,12.189,0.0677
-Cinnamon,17,Warming,,Erythronium grandiflorum,6,Photosyn,36.504,0.191
-Cinnamon,17,Warming,,Senecio crassulus,6,Photosyn,16.214,0.0743
+Cinnamon,1,Control,,Erythronium grandiflorum,1,p,42.737,0.2471
+Cinnamon,1,Control,,Senecio crassulus,1,p,13.107,0.072
+Cinnamon,2,Control,,Senecio crassulus,2,p,23.014,0.1215
+Cinnamon,2,Control,,Erythronium grandiflorum,2,p,40.587,0.2417
+Cinnamon,3,Control,,Senecio crassulus,3,p,13.279,0.0801
+Cinnamon,3,Control,,Erythronium grandiflorum,3,p,20.717,0.0976
+Cinnamon,4,Warming,,Erythronium grandiflorum,10,p,27.531,0.1386
+Cinnamon,4,Warming,,Senecio crassulus,10,p,12.472,0.0641
+Cinnamon,4,Control,,Senecio crassulus,4,p,15.086,0.0805
+Cinnamon,4,Control,,Erythronium grandiflorum,4,p,29.769,0.134
+Cinnamon,5,Control,,Senecio crassulus,12,p,20.608,0.1093
+Cinnamon,5,Warming,,Erythronium grandiflorum,9,p,24.885,0.1469
+Cinnamon,5,Control,,Erythronium grandiflorum,11,p,30.064,0.1618
+Cinnamon,5,Control,,Senecio crassulus,5,p,13.004,0.0541
+Cinnamon,5,Control,,Erythronium grandiflorum,5,p,25.762,0.1357
+Cinnamon,9,Warming,,Senecio crassulus,11,p,13.081,0.0706
+Cinnamon,9,Warming,,Senecio crassulus,11,p,8.381,0.0403
+Cinnamon,10,Warming,,Erythronium grandiflorum,12,p,31.349,0.1795
+Cinnamon,10,Warming,,Senecio crassulus,13,p,9.909,0.0522
+Cinnamon,12,Warming,,Erythronium grandiflorum,7,p,30.945,0.1744
+Cinnamon,13,Warming,,Erythronium grandiflorum,8,p,22.635,0.1272
+Cinnamon,13,Warming,,Senecio crassulus,8,p,12.189,0.0677
+Cinnamon,17,Warming,,Erythronium grandiflorum,6,p,36.504,0.191
+Cinnamon,17,Warming,,Senecio crassulus,6,p,16.214,0.0743
 Gothic,1,Control,,Delphinium,6,,19.0531,0.1073
 Gothic,1,Control,,Heraclum,6,,54.369,0.1631
 Gothic,1,Control,,Veratrum,6,,150.592,0.7538
