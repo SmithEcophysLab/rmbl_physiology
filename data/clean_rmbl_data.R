@@ -2,7 +2,7 @@
 
 library(dplyr)
 library(tidyr)
-
+library(lubridate)
 
 # licor
 almont_0614 <- read.csv("licor/raw/2021-06-14-1405_logdata_almont.csv")
@@ -31,6 +31,9 @@ licor$code[licor$code == "heraclum"] <- "HERSPH"
 licor$code[licor$code == "veratrum"] <- "VERCAL"
 
 licor$code <- toupper(licor$code)
+
+licor <- licor %>% separate(col = date, into = "date", sep = "[[:space:]]")
+licor$date <- parse_date_time(licor$date, "Ymd")
 
 write.csv(licor, 'licor/licor.csv', row.names = F)
 
@@ -77,14 +80,17 @@ multispeq$code[multispeq$code == "veratrum"] <- "VERCAL"
 
 multispeq$code <- toupper(multispeq$code)
 
+multispeq <- multispeq %>% separate(col = time, into = "date_ms", sep = "[[:space:]]")
+multispeq$date <- parse_date_time(multispeq$date, "mdy")
+
 # combine datasets
 leaf_area$individual <- as.character(leaf_area$individual)
 licor$individual <- as.character(licor$individual)
 multispeq$individual <- as.character(multispeq$individual)
 
-data_leafarea_licor <- full_join(leaf_area, licor, 
-                                 by = c("site", "treatment", "plot", "code", "individual", "type"))
-data_leafarea_licor_multispeq <- full_join(data_leafarea_licor, multispeq, 
+data_multispeq_licor <- full_join(licor, multispeq, 
+                                 by = c("site", "treatment", "plot", "code", "individual", "type", "date"))
+data_leafarea_licor_multispeq <- full_join(leaf_area, data_multispeq_licor, 
                       by = c("site", "treatment", "plot", "code", "individual", "type"))
 
 # species codes
@@ -92,7 +98,20 @@ species_codes <- read.csv("../analysis/species_codes.csv")
 species_codes <- select(species_codes, -X)
 
 data_all <- left_join(data_leafarea_licor_multispeq, species_codes, by = c("code"))
-data_all <- select(data_all, site, plot, treatment, code, genus_species, genus, species, everything())
+
+# date
+data_all$year <- year(data_all$date)
+data_all$month <- month(data_all$date)
+data_all$day <- day(data_all$date)
+data_all$doy <- yday(data_all$date)
+
+data_all <- select(data_all, site, plot, treatment, code, genus_species, genus, species, individual, type, 
+                   date, year, month, day, doy, everything())
 
 write.csv(data_all, 'data_clean.csv', row.names = F)
  
+data_p <- subset(data_all, type == "p")
+photo_avg <- data_p %>% group_by(site, treatment, plot, code, genus_species, genus, species, individual, type) %>%
+  summarise_all(mean, na.rm = T)
+
+write.csv(photo_avg, 'average_photosynthesis.csv', row.names = F)

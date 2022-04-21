@@ -1,20 +1,20 @@
 ﻿Site,Plot,Treatment,code,Species,Individual,type,Area (cm2),Dry Mass (g)
-Almont,1,Control,,Wyethia,25,,160.96,1.9409
-Almont,1,Control,,Wyethia,24,,151.774,1.3745
-Almont,2,Control,,Wyethia,22,,155.796,1.8305
-Almont,3,Control,,Ger,21,,32.366,0.2542
-Almont,3,Control,,Wyethia,21,,72.842,1.3759
-Almont,4,Control,,Ger,20,,19.159,0.1713
-Almont,4,Control,,Wyethia,20,,120.84,1.3757
-Almont,5,Control,,Wyethia,23,,273.994,2.5441
-Almont,8,Warming,,Wyethia,8,,174.833,1.6005
-Almont,8,Warming,,Wyethia,7,,220.593,2.1211
-Almont,12,Warming,,Wyethia,6,,262.184,2.6792
-Almont,16,Warming,,Wyethia,9,,204.339,2.1852
-Almont,24,Warming,,Wyethia,10,,221.408,2.0257
-Almont,28,Warming,,Wyethia,13,,161.552,1.4442
-Almont,32,Warming,,Wyethia,11,,152.439,1.2877
-Almont,32,Warming,,Wyethia,12,,174.364,1.4686
+Almont,1,Control,,Wyethia,25,p,160.96,1.9409
+Almont,1,Control,,Wyethia,24,p,151.774,1.3745
+Almont,2,Control,,Wyethia,22,p,155.796,1.8305
+Almont,3,Control,,Ger,21,p,32.366,0.2542
+Almont,3,Control,,Wyethia,21,p,72.842,1.3759
+Almont,4,Control,,Ger,20,p,19.159,0.1713
+Almont,4,Control,,Wyethia,20,p,120.84,1.3757
+Almont,5,Control,,Wyethia,23,p,273.994,2.5441
+Almont,8,Warming,,Wyethia,8,p,174.833,1.6005
+Almont,8,Warming,,Wyethia,7,p,220.593,2.1211
+Almont,12,Warming,,Wyethia,6,p,262.184,2.6792
+Almont,16,Warming,,Wyethia,9,p,204.339,2.1852
+Almont,24,Warming,,Wyethia,10,p,221.408,2.0257
+Almont,28,Warming,,Wyethia,13,p,161.552,1.4442
+Almont,32,Warming,,Wyethia,11,p,152.439,1.2877
+Almont,32,Warming,,Wyethia,12,p,174.364,1.4686
 Cinnamon,1,Control,,Erythronium grandiflorum,1,p,42.737,0.2471
 Cinnamon,1,Control,,Senecio crassulus,1,p,13.107,0.072
 Cinnamon,2,Control,,Senecio crassulus,2,p,23.014,0.1215
@@ -39,18 +39,18 @@ Cinnamon,13,Warming,,Erythronium grandiflorum,8,p,22.635,0.1272
 Cinnamon,13,Warming,,Senecio crassulus,8,p,12.189,0.0677
 Cinnamon,17,Warming,,Erythronium grandiflorum,6,p,36.504,0.191
 Cinnamon,17,Warming,,Senecio crassulus,6,p,16.214,0.0743
-Gothic,1,Control,,Delphinium,6,,19.0531,0.1073
-Gothic,1,Control,,Heraclum,6,,54.369,0.1631
-Gothic,1,Control,,Veratrum,6,,150.592,0.7538
-Gothic,2,Control,,Delphinium,7,,33.592,0.1726
-Gothic,2,Control,,Heraclum,7,,33.742,0.1246
-Gothic,2,Control,,Veratrum,7,,189.994,0.8756
-Gothic,3,Control,,Delphinium,8,,57.111,0.2627
-Gothic,3,Control,,Heraclum,8,,61.615,0.1614
-Gothic,3,Control,,Veratrum,8,,215.922,1.159
-Gothic,4,Control,,Delphinium,9,,41.811,0.2425
-Gothic,4,Control,,Heraclum,9,,32.271,0.0914
-Gothic,4,Control,,Veratrum,9,,175.791,1.0792
-Gothic,5,Control,,Delphinium,10,,47.95,0.2551
-Gothic,5,Control,,Heraclum,10,,73.361,0.2959
-Gothic,5,Control,,Veratrum,10,,162.501,0.8789
+Gothic,1,Control,,Delphinium,6,p,19.0531,0.1073
+Gothic,1,Control,,Heraclum,6,p,54.369,0.1631
+Gothic,1,Control,,Veratrum,6,p,150.592,0.7538
+Gothic,2,Control,,Delphinium,7,p,33.592,0.1726
+Gothic,2,Control,,Heraclum,7,p,33.742,0.1246
+Gothic,2,Control,,Veratrum,7,p,189.994,0.8756
+Gothic,3,Control,,Delphinium,8,p,57.111,0.2627
+Gothic,3,Control,,Heraclum,8,p,61.615,0.1614
+Gothic,3,Control,,Veratrum,8,p,215.922,1.159
+Gothic,4,Control,,Delphinium,9,p,41.811,0.2425
+Gothic,4,Control,,Heraclum,9,p,32.271,0.0914
+Gothic,4,Control,,Veratrum,9,p,175.791,1.0792
+Gothic,5,Control,,Delphinium,10,p,47.95,0.2551
+Gothic,5,Control,,Heraclum,10,p,73.361,0.2959
+Gothic,5,Control,,Veratrum,10,p,162.501,0.8789
