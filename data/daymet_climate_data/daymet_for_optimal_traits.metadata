@@ -1,0 +1,26 @@
+# Metadata
+
+This is an explanation of the variables included in the dataset The
+dataset is derived from Daymet V3. Average temperature was calculated as
+(tmin + tmax)/2. VPD was calculated from the vapor pressure variable
+an estimate of vapor pressure at saturation estimated from average
+temperature and the Lowe (1976) equation. PAR was calculated from
+incoming short wave radiation variable, using some common coefficients
+(e.g. Rg.to.PPFD function from bigleaf R package). Growing season length
+was derived from landsat observations. As Landsat is not that good for
+phenology metrics estimation at this region, I like to do a median of all
+the phenology estimates from 1985 to present (to get just one estimate
+per site), which is more trustable than the year-to-year variation
+(e.g. some year-to year variation in growing season length may be just
+errors in estimates because of bad remote sensing data). Here is more
+description, column by column.
+
+column		description
+site		Site name
+elevation	elevation in m
+year		year
+month		number of the month (1-12)
+tave		average temperature in Celsius
+vpd		average vapor pressure deficit in kPa
+par		average (within daylight hours) PAR in umol m-2 s-1
+seasonLength	growing season length as a fraction of a year
